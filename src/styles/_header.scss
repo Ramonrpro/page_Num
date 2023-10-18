@@ -1,0 +1,42 @@
+@use 'variaveis';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    &__navbar {
+
+        a {
+            position: relative;
+            font-size: 18px;
+            color: variaveis.$corTextoPrincipal;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                width: 0;
+                height: 2px;
+                background-color: variaveis.$corTextoPrincipal;
+                transition: .3s;
+
+            }
+
+            &:hover::before {
+                width: 100%;
+
+            }
+        }
+    }
+}

@@ -1,3 +1,41 @@
-body{
-    background-color: rgb(45, 57, 186);
+@use 'variaveis';
+@use 'header';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style-type: none;
+}
+
+
+body {
+    background-image: url(../img/num.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5.6vw;
+}
+
+.hero {
+    width: 40%;
+    margin-left: 100px;
+
+}
+
+.text--big {
+    font-size: 24px;
+    color: variaveis.$corTextoSecundario;
+}
+
+.title--big {
+    color: variaveis.$corTextoPrincipal;
+    font-size: 80px;
+    padding: 30px 180px 10px;
+}
+
+.text {
+    color: variaveis.$corTextoSecundario;
+    margin-bottom: 30px;
 }
