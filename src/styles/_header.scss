@@ -12,7 +12,17 @@
     align-items: center;
     z-index: 1;
 
+    @media(max-width: 900px) {
+        width: 768px;
+    }
+
+    @media(max-width: 768px) {
+        padding: 10px 30px;
+        width: 380px;
+    }
+
     &__navbar {
+
 
         a {
             position: relative;
@@ -21,6 +31,11 @@
             font-weight: 600;
             text-decoration: none;
             margin-left: 40px;
+
+            @media(max-width: 768px) {
+                font-size: 12px;
+                margin-left: 15px;
+            }
 
             &::before {
                 content: '';

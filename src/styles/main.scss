@@ -12,16 +12,75 @@
 
 
 body {
+    background-color: black;
     background-image: url(../img/num.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 5.6vw;
+
+    @media(max-width:900px) {
+        background-image: url(../../dist/img/num_ipad.jpg);
+        background-position: center;
+        background-color: rgb(0, 0, 0);
+        max-width: 900px;
+        width: 100%;
+    }
+    
+
+    @media(max-width: 768px) {
+        max-width: 768px;
+        width: 100%;
+    }
 }
 
 .hero {
-    width: 40%;
+    width: 35%;
     margin-left: 100px;
 
+    
+
+    @media(max-width: 900px) {
+        overflow-x: hidden;
+        margin-left: 150px;
+        text-align: center;
+        margin-top: 120px;
+        width:60%;
+    }
+
+    @media(max-width: 768px) {
+        margin-top: 40px;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    &__trailer {
+        max-width: 450px;
+        max-height: 250px;
+
+        @media(max-width: 900px) {
+            margin-top: 60px;
+            
+        }
+
+        @media(max-width: 768px) {
+            margin-left: 0;
+            max-width: 250px;
+            max-height: 150px;
+            margin-top: 0;
+            
+        }
+    }
+
+}
+.title--big {
+    color: variaveis.$corTextoPrincipal;
+    font-size: 80px;
+    margin-top: 40px;
+    text-align: center;
+    
+    @media(max-width: 768px) {
+        font-size: 50px;
+    }
 }
 
 .text--big {
@@ -29,13 +88,19 @@ body {
     color: variaveis.$corTextoSecundario;
 }
 
-.title--big {
-    color: variaveis.$corTextoPrincipal;
-    font-size: 80px;
-    padding: 30px 180px 10px;
-}
 
 .text {
+    font-size: 18px;
     color: variaveis.$corTextoSecundario;
     margin-bottom: 30px;
+
+    @media(max-width: 900px) {
+        font-size: 22px;
+        margin: 50px auto ;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 12px;
+        margin: 50px auto ;
+    }
 }
